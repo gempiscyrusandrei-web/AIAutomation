@@ -1,85 +1,99 @@
-*{
-  display:inline-block;
-  padding:14px 26px;
-  border-radius:12px;
-  background:
-  linear-gradient(135deg,#3b82f6,#06b6d4);
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
+:root{
 
-.secondary{
-  background:transparent;
-  border:1px solid #38bdf8;
-}
+/* PRICING */
 
-.section{
-  max-width:1200px;
-  margin:100px auto;
-  padding:20px;
-  text-align:center;
-}
-
-.grid{
+.pricing-grid{
   display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  margin-top:40px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
 }
 
-.card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:30px;
-  border-radius:20px;
-  backdrop-filter:blur(14px);
-  transition:0.3s ease;
+.pricing-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:42px;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:
-  0 0 30px rgba(56,189,248,0.2);
+.pricing-card.featured{
+  border:1px solid rgba(56,189,248,0.4);
 }
 
-.premium{
-  border:1px solid #38bdf8;
+.price{
+  font-size:52px;
+  margin:24px 0;
+  font-weight:800;
 }
 
-.video-wrapper{
-  overflow:hidden;
-  border-radius:20px;
-  margin-top:30px;
+.pricing-card ul{
+  list-style:none;
+  margin:24px 0;
 }
+
+.pricing-card ul li{
+  margin-bottom:14px;
+  color:var(--muted);
+}
+
+/* FORM */
 
 .form-wrapper{
-  margin-top:30px;
-  border-radius:20px;
   overflow:hidden;
+  border-radius:28px;
+  border:1px solid var(--border);
 }
 
+/* FOOTER */
+
 footer{
+  padding:60px 0;
+  border-top:1px solid var(--border);
+  color:var(--muted);
   text-align:center;
-  color:#64748b;
-  padding:50px 20px;
+}
+
+/* CHAT BUTTON */
+
+.chat-btn{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  background:var(--primary);
+  color:#001018;
+  padding:14px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
 }
 
 @media(max-width:768px){
 
-  nav{
+  .nav-wrapper{
     flex-direction:column;
-    gap:20px;
-  }
-
-  header h1{
-    font-size:40px;
+    gap:18px;
   }
 
   .nav-links{
     flex-wrap:wrap;
     justify-content:center;
+  }
+
+  .section-title h2{
+    font-size:34px;
   }
 
 }
